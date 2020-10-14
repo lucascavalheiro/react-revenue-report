@@ -5,7 +5,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "jest"
+    "test": "jest",
+    "prettier:check": "prettier --check \"src/**/*.js\"",
+    "prettier:write": "prettier --write prettier --write \"**/*.js\"",
+    "pretty-quick": "pretty-quick"
   },
   "dependencies": {
     "@babel/core": "7.9.0",
@@ -75,7 +78,10 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "enzyme-to-json": "^3.6.1"
+    "enzyme-to-json": "^3.6.1",
+    "husky": "^4.3.0",
+    "prettier": "2.1.2",
+    "pretty-quick": "^3.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -152,5 +158,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --bail"
+    }
   }
 }
