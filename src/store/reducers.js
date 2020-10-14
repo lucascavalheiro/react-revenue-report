@@ -1,9 +1,9 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 import {
   reducer as revenueStore,
   initialState as revenueInitialState,
-} from "../modules/revenue/store/revenue.store";
+} from '../modules/revenue/store/revenue.store';
 
 const reducers = {
   revenue: revenueStore,

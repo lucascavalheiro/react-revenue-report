@@ -1,7 +1,7 @@
-import { createSelector } from "reselect";
+import { createSelector } from 'reselect';
 
 // ACTION TYPES
-const GET_REVENUE = "reminders/GET_REVENUE";
+const GET_REVENUE = 'reminders/GET_REVENUE';
 
 export const initialState = {};
 

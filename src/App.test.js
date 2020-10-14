@@ -1,8 +1,8 @@
-import React from "react";
-import { shallow } from "enzyme";
-import App from "./App";
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
 
-test("renders learn react link", () => {
+test('renders learn react link', () => {
   const wrapper = shallow(<App />);
-  expect(wrapper.find("Revenue").name()).toEqual("Revenue");
+  expect(wrapper.find('Revenue').name()).toEqual('Revenue');
 });
