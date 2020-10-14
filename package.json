@@ -1,7 +1,7 @@
 {
   "name": "react-revenue-report",
   "version": "0.1.0",
-  "private": true,
+  "author": "Lucas Cavalheiro <lucasad.cavalheiro@gmail.com>",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -82,9 +82,6 @@
     "husky": "^4.3.0",
     "prettier": "2.1.2",
     "pretty-quick": "^3.1.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
