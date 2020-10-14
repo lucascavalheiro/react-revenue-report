@@ -4,5 +4,5 @@ import App from "./App";
 
 test("renders learn react link", () => {
   const wrapper = shallow(<App />);
-  console.log(wrapper.text());
+  expect(wrapper.find("Revenue").name()).toEqual("Revenue");
 });
