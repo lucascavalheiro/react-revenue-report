@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 
 import {
+  revenueStoreName,
   reducer as revenueStore,
   initialState as revenueInitialState,
 } from '../modules/revenue/store/revenue.store';
 
 const reducers = {
-  revenue: revenueStore,
+  [revenueStoreName]: revenueStore,
 };
 
 export const getReducers = () => {
@@ -14,5 +15,5 @@ export const getReducers = () => {
 };
 
 export const initialStates = {
-  revenue: revenueInitialState,
+  [revenueStoreName]: revenueInitialState,
 };

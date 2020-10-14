@@ -2,7 +2,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import * as reduxDevtools from 'redux-devtools-extension';
 import * as reduxDevtoolsProduction from 'redux-devtools-extension/logOnlyInProduction';
-
 import { getReducers, initialStates } from './reducers';
 
 const dev = process.env.NODE_ENV !== 'production';

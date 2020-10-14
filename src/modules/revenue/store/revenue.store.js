@@ -1,5 +1,7 @@
 import { createSelector } from 'reselect';
 
+export const revenueStoreName = 'revenue';
+
 // ACTION TYPES
 const GET_REVENUE = 'reminders/GET_REVENUE';
 
@@ -18,4 +20,4 @@ export const reducer = (state = initialState, action) => {
 // SELECTORS
 const selectProps = (_, props) => props;
 
-const selectRevenueState = (state, props) => state.revenue;
+const selectRevenueState = (state, props) => state[revenueStoreName];
