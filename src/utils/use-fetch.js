@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { factoryRevenue } from '../modules/revenue/fixtures/revenue.factory';
+import { factoryRevenue } from '../modules/revenue/fixtures/factories/revenue.factory';
 
 const useFetch = (url, options) => {
   const [response, setResponse] = useState(null);

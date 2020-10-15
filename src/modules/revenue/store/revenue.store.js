@@ -56,6 +56,25 @@ export const onRevenueRestore = () => ({
 });
 
 // SELECTORS
-const selectProps = (_, props) => props;
+export const selectRevenueStore = (state) => state[revenueStoreName];
 
-export const selectRevenueState = (state, props) => state[revenueStoreName];
+export const selectReveneu = createSelector(selectRevenueStore, (store) => {
+  if (!store?.data) return null;
+
+  return store.data.revenue;
+});
+
+export const selectOfferName = createSelector(selectReveneu, (revenue) => {
+  if (!revenue?.offer) return null;
+
+  return revenue.offer.name;
+});
+
+export const selectOfferDescription = createSelector(
+  selectReveneu,
+  (revenue) => {
+    if (!revenue?.offer) return null;
+
+    return revenue.offer.description;
+  }
+);
