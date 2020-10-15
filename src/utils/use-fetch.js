@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import mockResponse from '../mock-response.json';
+import { factoryRevenue } from '../modules/revenue/fixtures/revenue.factory';
 
 const useFetch = (url, options) => {
   const [response, setResponse] = useState(null);
@@ -18,6 +18,9 @@ const useFetch = (url, options) => {
       // setError(null);
       // setResponse(json);
       console.log(url, options);
+
+      const mockResponse = { revenue: factoryRevenue.build({}) };
+
       setTimeout(() => {
         setResponse(mockResponse);
       }, 2000);
