@@ -1,0 +1,38 @@
+@import '../../styles/colors.scss';
+@import '../../styles/measures.scss';
+
+.ddl-date-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 42px;
+  width: 100%;
+  background-color: $white;
+  border-radius: $border-radius;
+
+  > span {
+    width: 100%;
+    padding-left: $spacing_large;
+    padding-right: $spacing_large;
+    align-self: center;
+    color: $dark_grey_blue_two;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  > div {
+    height: 100%;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    background-color: $light_gray;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    > span {
+      align-self: center;
+      color: $light_gray_two;
+      font-size: 11px;
+    }
+  }
+}

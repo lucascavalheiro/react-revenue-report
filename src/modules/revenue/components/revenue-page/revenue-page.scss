@@ -17,5 +17,13 @@
     max-width: 344px;
     flex: 1;
     margin: 32px 19px;
+
+    > * {
+      margin-bottom: 16px;
+    }
+
+    .date-picker-full-width {
+      width: 100%;
+    }
   }
 }
