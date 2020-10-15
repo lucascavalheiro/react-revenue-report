@@ -1,0 +1,17 @@
+@import '../../../styles/colors.scss';
+
+.offer-card-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: $dark_grey_blue_two;
+
+  .offer-name {
+    font-weight: bold;
+  }
+
+  .offer-description {
+    letter-spacing: initial;
+  }
+}
