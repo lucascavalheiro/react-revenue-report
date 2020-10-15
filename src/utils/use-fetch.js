@@ -23,7 +23,7 @@ const useFetch = (url, options) => {
 
       setTimeout(() => {
         setResponse(mockResponse);
-      }, 2000);
+      }, 0);
     } catch (error) {
       setError(error);
     } finally {

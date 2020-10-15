@@ -1,13 +1,8 @@
 import React from 'react';
-import './app.scss';
-import Revenue from './modules/revenue';
+import RevenuePage from './modules/revenue/components/revenue-page';
 
 const App = () => {
-  return (
-    <div className='container'>
-      <Revenue />
-    </div>
-  );
+  return <RevenuePage />;
 };
 
 export default App;

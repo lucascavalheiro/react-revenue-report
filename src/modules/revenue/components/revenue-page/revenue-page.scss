@@ -1,0 +1,21 @@
+@import '../../../styles/colors.scss';
+
+.revenue-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: $dark_grey_blue_two;
+
+  .status-bar {
+    height: 20px;
+    width: 100%;
+    background-color: $dark;
+  }
+
+  > .content {
+    max-width: 344px;
+    flex: 1;
+    margin: 32px 19px;
+  }
+}
