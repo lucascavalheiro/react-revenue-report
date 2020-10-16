@@ -1,0 +1,14 @@
+@import '../../../styles//measures.scss';
+
+.offer-balance-sheet {
+  padding-bottom: $spacing_small;
+
+  .divider {
+    margin-top: $spacing_small;
+    margin-bottom: $spacing_small;
+  }
+
+  .net-revenue {
+    margin-bottom: $spacing_small;
+  }
+}
