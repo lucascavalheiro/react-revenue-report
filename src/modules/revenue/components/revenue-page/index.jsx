@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import DropdownDatePicker from '../../../components/dropdown-date-picker';
-import useFetchRevenue from '../../data/use-fetch-revenue';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import RevenueBalanceSheet from '../revenue-balance-sheet';
 import OfferCard from '../offer-card';
 import './revenue-page.scss';
 import OfferBalanceSheet from '../offer-balance-sheet';
 import RevenueAreaChart from '../revenue-area-chart';
+import { selectIsFetchingRevenue } from '../../store/revenue.store';
+import Loading from '../../../components/loading';
+import RevenueDatePicker from '../revenue-date-picker';
 
 const RevenuePage = () => {
-  const [date, setDate] = useState(null);
-  const [fetchByDate] = useFetchRevenue();
+  const isFecthing = useSelector(selectIsFetchingRevenue);
 
   return (
     <div className='revenue-page'>
       <div className='status-bar' />
       <div className='content'>
         <OfferCard />
-
-        <DatePicker
-          selected={date}
-          onChange={(date) => setDate(date)}
-          customInput={<DropdownDatePicker />}
-          wrapperClassName='date-picker-full-width'
-          dateFormat='MMMM dd, yyyy'
-        />
-
+        <RevenueDatePicker />
         <RevenueBalanceSheet />
-
         <OfferBalanceSheet />
-
         <RevenueAreaChart />
       </div>
+      {isFecthing && <Loading />}
     </div>
   );
 };

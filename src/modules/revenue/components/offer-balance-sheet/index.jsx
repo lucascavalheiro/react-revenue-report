@@ -8,6 +8,7 @@ import './offer-balance-sheet.scss';
 
 const OfferBalanceSheet = () => {
   const offer = useSelector(selectOffer);
+  const limitText = offer?.limit ? `${offer?.limit} per customer` : '';
 
   return (
     <div className='offer-balance-sheet'>
@@ -24,7 +25,7 @@ const OfferBalanceSheet = () => {
       <LabelValueLine label='Unit cost' value={formatToUSD(offer?.unitCost)} />
 
       <Divider />
-      <LabelValueLine label='Limit' value={`${offer?.limit} per customer`} />
+      <LabelValueLine label='Limit' value={limitText} />
 
       <Divider />
       <LabelValueLine label='Category' value={offer?.category} />
