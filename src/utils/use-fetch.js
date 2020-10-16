@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { factoryRevenue } from '../modules/revenue/fixtures/factories/revenue.factory';
 
-const useFetch = (url, options) => {
+const useFetch = () => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -10,20 +9,22 @@ const useFetch = (url, options) => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
+  const fetchData = async (url, options = {}) => {
     setIsLoading(true);
+    setError(null);
+    setResponse(null);
     try {
-      // const res = await fetch(url, options);
-      // const json = await res.json();
-      // setError(null);
-      // setResponse(json);
-      console.log(url, options);
+      if (!url) return;
 
-      const mockResponse = { revenue: factoryRevenue.build({}) };
+      const response = await fetch(url, options);
+      const json = await response.json();
 
-      setTimeout(() => {
-        setResponse(mockResponse);
-      }, 0);
+      if (!response.ok) {
+        setError(json.error);
+        return;
+      }
+
+      setResponse(json);
     } catch (error) {
       setError(error);
     } finally {

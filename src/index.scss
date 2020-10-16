@@ -8,10 +8,6 @@ body {
   background-color: $dark_grey_blue_two;
 }
 
-#root {
-  height: 100vh;
-}
-
 span {
   &:empty:before {
     content: '\200b'; // unicode zero width space character

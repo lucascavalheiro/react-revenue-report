@@ -96,3 +96,17 @@ export const selectRevenueValues = createSelector(selectRevenue, (revenue) => {
 export const selectValidations = createSelector(selectRevenue, (revenue) => {
   return revenue?.validations;
 });
+
+export const selectIsFetchingRevenue = createSelector(
+  selectRevenueStore,
+  (store) => {
+    return store.isFetching;
+  }
+);
+
+export const selectRevenueError = createSelector(
+  selectRevenueStore,
+  (store) => {
+    return store.error;
+  }
+);
