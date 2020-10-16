@@ -1,0 +1,9 @@
+.label-value-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  > span {
+    line-height: 16px;
+  }
+}
