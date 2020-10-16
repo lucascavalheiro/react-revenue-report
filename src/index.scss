@@ -8,3 +8,9 @@ body {
 #root {
   height: 100vh;
 }
+
+span {
+  &:empty:before {
+    content: '\200b'; // unicode zero width space character
+  }
+}
