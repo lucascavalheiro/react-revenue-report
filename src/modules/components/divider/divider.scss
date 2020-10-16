@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+@import '../../styles/measures.scss';
+
+.divider {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $white_25;
+  margin-top: $spacing_medium;
+
+  &.thick {
+    border-color: $white;
+  }
+}
