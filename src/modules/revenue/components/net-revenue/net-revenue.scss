@@ -1,0 +1,14 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/measures.scss';
+
+.net-revenue {
+  display: flex;
+  flex-direction: column;
+  margin-left: $spacing_x_small;
+  margin-top: $spacing_small;
+
+  .net-revenue-value {
+    font-size: 36px;
+    color: $white;
+  }
+}
