@@ -9,7 +9,11 @@ export const factoryValidation = Factory.define(({ transientParams }) => {
     validation: transientValue,
   } = transientParams;
 
-  const randomDate = faker.date.recent();
+  const randomDate = new Date();
+  const randomHour = faker.random.number({ min: 8, max: 19 });
+  const randomMinutes = faker.random.number(59);
+  const randomSeconds = faker.random.number(59);
+  randomDate.setHours(randomHour, randomMinutes, randomSeconds);
   const createAt = format(randomDate, "yyyy-MM-dd'T'HH:mm:ssXXX");
 
   let value;

@@ -7,6 +7,7 @@ import RevenueBalanceSheet from '../revenue-balance-sheet';
 import OfferCard from '../offer-card';
 import './revenue-page.scss';
 import OfferBalanceSheet from '../offer-balance-sheet';
+import RevenueAreaChart from '../revenue-area-chart';
 
 const RevenuePage = () => {
   const [date, setDate] = useState(null);
@@ -29,6 +30,8 @@ const RevenuePage = () => {
         <RevenueBalanceSheet />
 
         <OfferBalanceSheet />
+
+        <RevenueAreaChart />
       </div>
     </div>
   );

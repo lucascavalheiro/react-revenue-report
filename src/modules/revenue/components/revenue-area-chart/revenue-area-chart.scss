@@ -1,0 +1,36 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/measures.scss';
+
+.revenue-area-chart {
+  .chart-legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    > span {
+      align-self: center;
+    }
+
+    .net-revenue {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 14px;
+      text-align: center;
+      padding: $spacing_small 35px;
+      background-color: $teal_blue;
+      color: $dark;
+      border-radius: $border_radius;
+    }
+  }
+
+  .smaller-divider {
+    margin-top: $spacing_x_small;
+  }
+
+  .revenue-area-chart-xaxis-label {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    fill: $white;
+  }
+}

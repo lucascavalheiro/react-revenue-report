@@ -92,3 +92,7 @@ export const selectRevenueValues = createSelector(selectRevenue, (revenue) => {
   if (!revenue) return null;
   return { net: revenue?.net, gross: revenue.gross, spent: revenue.spent };
 });
+
+export const selectValidations = createSelector(selectRevenue, (revenue) => {
+  return revenue?.validations;
+});
