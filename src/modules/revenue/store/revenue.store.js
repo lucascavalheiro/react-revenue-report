@@ -58,23 +58,42 @@ export const onRevenueRestore = () => ({
 // SELECTORS
 export const selectRevenueStore = (state) => state[revenueStoreName];
 
-export const selectReveneu = createSelector(selectRevenueStore, (store) => {
+export const selectRevenue = createSelector(selectRevenueStore, (store) => {
   if (!store?.data) return null;
 
   return store.data.revenue;
 });
 
-export const selectOfferName = createSelector(selectReveneu, (revenue) => {
+export const selectOfferName = createSelector(selectRevenue, (revenue) => {
   if (!revenue?.offer) return null;
 
   return revenue.offer.name;
 });
 
 export const selectOfferDescription = createSelector(
-  selectReveneu,
+  selectRevenue,
   (revenue) => {
     if (!revenue?.offer) return null;
 
     return revenue.offer.description;
   }
 );
+
+export const selectOffer = createSelector(selectRevenue, (revenue) => {
+  if (!revenue) return null;
+
+  return revenue.offer;
+});
+
+export const selectRevenueNetValue = createSelector(
+  selectRevenue,
+  (revenue) => {
+    return revenue?.net;
+  }
+);
+
+export const selectRevenueValues = createSelector(selectRevenue, (revenue) => {
+  if (!revenue) return null;
+
+  return { net: revenue?.net, gross: revenue.gross, spent: revenue.spent };
+});
