@@ -24,7 +24,7 @@ const OfferBalanceSheet = () => {
       <LabelValueLine label='Unit cost' value={formatToUSD(offer?.unitCost)} />
 
       <Divider />
-      <LabelValueLine label='Limit' value={offer?.limit} />
+      <LabelValueLine label='Limit' value={`${offer?.limit} per customer`} />
 
       <Divider />
       <LabelValueLine label='Category' value={offer?.category} />
