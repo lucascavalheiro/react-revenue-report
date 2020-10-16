@@ -1,8 +1,11 @@
+@import './modules/styles/colors.scss';
+
 body {
   margin: 0;
   font-family: 'Open Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $dark_grey_blue_two;
 }
 
 #root {
