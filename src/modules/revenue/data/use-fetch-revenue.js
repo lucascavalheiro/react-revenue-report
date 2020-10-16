@@ -30,7 +30,6 @@ const useFetchRevenue = () => {
   }, [date]);
 
   useEffect(() => {
-    console.log({ response, error });
     if (response && !error) {
       dispatch(onRevenueFetchSuccess(response));
       return;
