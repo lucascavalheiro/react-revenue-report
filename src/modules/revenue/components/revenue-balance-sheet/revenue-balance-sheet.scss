@@ -1,0 +1,18 @@
+@import '../../../styles//measures.scss';
+
+.revenue-balance-sheet {
+  padding-bottom: $spacing_small;
+
+  .divider:not(:first-child) {
+    margin-top: $spacing_small;
+    margin-bottom: $spacing_small;
+  }
+
+  .divider:nth-child(3) {
+    margin-top: $spacing_x_large;
+  }
+
+  .net-revenue {
+    margin-bottom: $spacing_small;
+  }
+}
