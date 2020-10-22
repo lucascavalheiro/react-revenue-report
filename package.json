@@ -7,7 +7,7 @@
     "build": "node scripts/build.js",
     "test": "jest",
     "prettier:check": "prettier --check \"src/**/*.js\"",
-    "prettier:write": "prettier --write prettier --write \"**/*.js\"",
+    "prettier:write": "prettier --write \"**/*.js\"",
     "pretty-quick": "pretty-quick"
   },
   "dependencies": {
